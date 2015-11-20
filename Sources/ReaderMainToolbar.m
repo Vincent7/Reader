@@ -214,9 +214,10 @@
 				UIButton *printButton = [UIButton buttonWithType:UIButtonTypeCustom];
 				printButton.frame = CGRectMake(rightButtonX, BUTTON_Y, iconButtonWidth, BUTTON_HEIGHT);
 				[printButton setImage:[UIImage imageNamed:@"icn-share-print"] forState:UIControlStateNormal];
+                [printButton setContentMode:UIViewContentModeCenter];
 				[printButton addTarget:self action:@selector(printButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-				[printButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
-				[printButton setBackgroundImage:buttonN forState:UIControlStateNormal];
+//				[printButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
+//				[printButton setBackgroundImage:buttonN forState:UIControlStateNormal];
 				printButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
 				//printButton.backgroundColor = [UIColor grayColor];
 				printButton.exclusiveTouch = YES;
