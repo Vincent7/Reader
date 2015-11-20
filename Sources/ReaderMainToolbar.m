@@ -190,7 +190,7 @@
         [shareButton setTitle:@"Y" forState:UIControlStateNormal];
         [shareButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
-        [shareButton.titleLabel setFont:[UIFont fontWithName:@"EUMIcons-App-Regular" size:17]];
+        [shareButton.titleLabel setFont:[UIFont fontWithName:@"EUMIcons-App-Regular" size:50]];
 //        [shareButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
 //        [shareButton setBackgroundImage:buttonN forState:UIControlStateNormal];
         shareButton.autoresizingMask = UIViewAutoresizingNone;
