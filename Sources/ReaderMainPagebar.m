@@ -171,16 +171,22 @@
 		}
 		else // Follow The Fuglyosity of Flat Fad
 		{
-			self.backgroundColor = [UIColor colorWithWhite:0.94f alpha:0.94f];
+            self.backgroundColor = kRGB(0x1f1f1f);//[UIColor colorWithWhite:0.94f alpha:0.94f];
 
-			CGRect lineRect = self.bounds; lineRect.size.height = 1.0f; lineRect.origin.y -= lineRect.size.height;
+			CGRect lineRect = self.bounds; lineRect.size.height = 1.0f; lineRect.origin.y -= lineRect.size.height - 2;
 
 			UIView *lineView = [[UIView alloc] initWithFrame:lineRect];
 			lineView.autoresizesSubviews = NO;
 			lineView.userInteractionEnabled = NO;
 			lineView.contentMode = UIViewContentModeRedraw;
 			lineView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-			lineView.backgroundColor = [UIColor colorWithWhite:0.64f alpha:0.94f];
+			lineView.backgroundColor = [UIColor clearColor];
+            [lineView.layer setBorderColor:[kRGB(0x1f1f1f) CGColor]];//边框的颜色
+            lineView.layer.shadowOffset = CGSizeMake(0, -3);
+            lineView.layer.shadowRadius = 3.0;
+            lineView.layer.shadowColor = [UIColor blackColor].CGColor;//shadow的颜色
+            lineView.layer.shadowOpacity = 1;
+            [lineView.layer setBorderWidth:2.75];
 			[self addSubview:lineView];
 		}
 

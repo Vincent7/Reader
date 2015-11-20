@@ -66,6 +66,8 @@
 		45AB7325141FC0B1003524C3 /* ThumbsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AB7312141FC0B1003524C3 /* ThumbsViewController.m */; };
 		45BD5AFE13AE721A00D6FE97 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BD5AFD13AE721A00D6FE97 /* MessageUI.framework */; };
 		45D5ADA31610EADD00706B9A /* ReaderDocumentOutline.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D5ADA21610EADC00706B9A /* ReaderDocumentOutline.m */; };
+		BF5243681BFF10A100CE91BA /* icn-share-print.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BF5243671BFF10A100CE91BA /* icn-share-print.pdf */; };
+		BF52436A1BFF10BE00CE91BA /* EUMIcons-App-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF5243691BFF10BE00CE91BA /* EUMIcons-App-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,6 +163,8 @@
 		45D5ADA11610EADC00706B9A /* ReaderDocumentOutline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReaderDocumentOutline.h; path = Sources/ReaderDocumentOutline.h; sourceTree = "<group>"; };
 		45D5ADA21610EADC00706B9A /* ReaderDocumentOutline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReaderDocumentOutline.m; path = Sources/ReaderDocumentOutline.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Reader-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Reader-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		BF5243671BFF10A100CE91BA /* icn-share-print.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "icn-share-print.pdf"; sourceTree = "<group>"; };
+		BF5243691BFF10BE00CE91BA /* EUMIcons-App-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EUMIcons-App-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +233,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BF5243691BFF10BE00CE91BA /* EUMIcons-App-Regular.ttf */,
 				4541A9D7122EA716001A5E60 /* Localizable.strings */,
 				45AB72DF141FC04B003524C3 /* README.md */,
 				45D5AD9E1610E66B00706B9A /* HISTORY.md */,
@@ -302,6 +307,7 @@
 				45AB72BF141FBFCA003524C3 /* Reader-Mark-N@2x.png */,
 				45AB72C0141FBFCA003524C3 /* Reader-Mark-Y.png */,
 				45AB72C1141FBFCA003524C3 /* Reader-Mark-Y@2x.png */,
+				BF5243671BFF10A100CE91BA /* icn-share-print.pdf */,
 				45AB72C2141FBFCA003524C3 /* Reader-Print.png */,
 				45AB72C3141FBFCA003524C3 /* Reader-Print@2x.png */,
 				45AB72C4141FBFCA003524C3 /* Reader-Thumbs.png */,
@@ -419,10 +425,12 @@
 				4541A9D8122EA716001A5E60 /* Localizable.strings in Resources */,
 				45699AB31A321F6100808606 /* Default-667h@2x.png in Resources */,
 				45AB72C6141FBFCA003524C3 /* AppIcon-057.png in Resources */,
+				BF52436A1BFF10BE00CE91BA /* EUMIcons-App-Regular.ttf in Resources */,
 				45AB72C7141FBFCA003524C3 /* AppIcon-072.png in Resources */,
 				45AB72C8141FBFCA003524C3 /* AppIcon-114.png in Resources */,
 				45AB72C9141FBFCA003524C3 /* Reader-Email.png in Resources */,
 				45AB72CA141FBFCA003524C3 /* Reader-Email@2x.png in Resources */,
+				BF5243681BFF10A100CE91BA /* icn-share-print.pdf in Resources */,
 				45AB72CB141FBFCA003524C3 /* Reader-Mark-N.png in Resources */,
 				45AB72CC141FBFCA003524C3 /* Reader-Mark-N@2x.png in Resources */,
 				45AB72CD141FBFCA003524C3 /* Reader-Mark-Y.png in Resources */,

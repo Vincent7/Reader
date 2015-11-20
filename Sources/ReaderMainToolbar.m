@@ -96,8 +96,8 @@
 
 		UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
 		doneButton.frame = CGRectMake(leftButtonX, BUTTON_Y, doneButtonWidth, BUTTON_HEIGHT);
-		[doneButton setTitleColor:[UIColor colorWithWhite:0.0f alpha:1.0f] forState:UIControlStateNormal];
-		[doneButton setTitleColor:[UIColor colorWithWhite:1.0f alpha:1.0f] forState:UIControlStateHighlighted];
+		[doneButton setTitleColor:[UIColor colorWithWhite:1.0f alpha:1.0f] forState:UIControlStateNormal];
+		[doneButton setTitleColor:[UIColor colorWithWhite:0.0f alpha:1.0f] forState:UIControlStateHighlighted];
 		[doneButton setTitle:doneButtonText forState:UIControlStateNormal]; doneButton.titleLabel.font = doneButtonFont;
 		[doneButton addTarget:self action:@selector(doneButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
 		[doneButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
@@ -185,10 +185,14 @@
         UIButton *shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
         rightButtonX -= (iconButtonWidth + buttonSpacing); // Next position
         shareButton.frame = CGRectMake(rightButtonX, BUTTON_Y, iconButtonWidth, BUTTON_HEIGHT);
-        [shareButton setImage:[UIImage imageNamed:@"Reader-Email"] forState:UIControlStateNormal];
+//        [shareButton setImage:[UIImage imageNamed:@"Reader-Email"] forState:UIControlStateNormal];
         [shareButton addTarget:self action:@selector(shareButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-        [shareButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
-        [shareButton setBackgroundImage:buttonN forState:UIControlStateNormal];
+        [shareButton setTitle:@"Y" forState:UIControlStateNormal];
+        [shareButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        
+        [shareButton.titleLabel setFont:[UIFont fontWithName:@"EUMIcons-App-Regular" size:17]];
+//        [shareButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
+//        [shareButton setBackgroundImage:buttonN forState:UIControlStateNormal];
         shareButton.autoresizingMask = UIViewAutoresizingNone;
         //thumbsButton.backgroundColor = [UIColor grayColor];
         shareButton.exclusiveTouch = YES;
@@ -209,7 +213,7 @@
 
 				UIButton *printButton = [UIButton buttonWithType:UIButtonTypeCustom];
 				printButton.frame = CGRectMake(rightButtonX, BUTTON_Y, iconButtonWidth, BUTTON_HEIGHT);
-				[printButton setImage:[UIImage imageNamed:@"Reader-Print"] forState:UIControlStateNormal];
+				[printButton setImage:[UIImage imageNamed:@"icn-share-print"] forState:UIControlStateNormal];
 				[printButton addTarget:self action:@selector(printButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
 				[printButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
 				[printButton setBackgroundImage:buttonN forState:UIControlStateNormal];
