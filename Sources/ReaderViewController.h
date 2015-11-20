@@ -34,7 +34,7 @@
 @optional // Delegate protocols
 
 - (void)dismissReaderViewController:(ReaderViewController *)viewController;
-- (void)shareCurrentPDFFile;
+- (void)shareCurrentPDFFile:(ReaderViewController *)viewController;
 @end
 
 @interface ReaderViewController : UIViewController
