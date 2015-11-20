@@ -722,7 +722,7 @@
 {
 #if (READER_ENABLE_SHARE == TRUE) // Option
     
-    [self.delegate shareCurrentPDFFile];
+    [self.delegate shareCurrentPDFFile:self];
     
 #endif // end of READER_STANDALONE Option
 }
