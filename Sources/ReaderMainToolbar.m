@@ -90,7 +90,7 @@
 #if (READER_STANDALONE == FALSE) // Option
 
 		UIFont *doneButtonFont = [UIFont systemFontOfSize:BUTTON_FONT_SIZE];
-		NSString *doneButtonText = NSLocalizedString(@"Done", @"button");
+		NSString *doneButtonText = @"C";
 		CGSize doneButtonSize = [doneButtonText sizeWithFont:doneButtonFont];
 		CGFloat doneButtonWidth = (doneButtonSize.width + TEXT_BUTTON_PADDING);
 
@@ -98,7 +98,8 @@
 		doneButton.frame = CGRectMake(leftButtonX, BUTTON_Y, doneButtonWidth, BUTTON_HEIGHT);
 		[doneButton setTitleColor:[UIColor colorWithWhite:1.0f alpha:1.0f] forState:UIControlStateNormal];
 		[doneButton setTitleColor:[UIColor colorWithWhite:0.0f alpha:1.0f] forState:UIControlStateHighlighted];
-		[doneButton setTitle:doneButtonText forState:UIControlStateNormal]; doneButton.titleLabel.font = doneButtonFont;
+		[doneButton setTitle:doneButtonText forState:UIControlStateNormal];
+        doneButton.titleLabel.font = [UIFont fontWithName:@"EUMIcons-App-Regular" size:50];
 		[doneButton addTarget:self action:@selector(doneButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
 		[doneButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
 		[doneButton setBackgroundImage:buttonN forState:UIControlStateNormal];
@@ -213,6 +214,7 @@
 
 				UIButton *printButton = [UIButton buttonWithType:UIButtonTypeCustom];
 				printButton.frame = CGRectMake(rightButtonX, BUTTON_Y, iconButtonWidth, BUTTON_HEIGHT);
+                UIImage *printImage = [UIImage imageNamed:@"icn-share-print"];
 				[printButton setImage:[UIImage imageNamed:@"icn-share-print"] forState:UIControlStateNormal];
                 [printButton setContentMode:UIViewContentModeCenter];
 				[printButton addTarget:self action:@selector(printButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
