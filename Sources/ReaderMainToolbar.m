@@ -112,6 +112,7 @@
 
 #endif // end of READER_STANDALONE Option
 
+        
 #if (READER_ENABLE_THUMBS == TRUE) // Option
 
 		UIButton *thumbsButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -179,7 +180,25 @@
 				}
 			}
 		}
-
+#if (READER_ENABLE_SHARE == TRUE) // Option
+        
+        UIButton *shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        rightButtonX -= (iconButtonWidth + buttonSpacing); // Next position
+        shareButton.frame = CGRectMake(rightButtonX, BUTTON_Y, iconButtonWidth, BUTTON_HEIGHT);
+        [shareButton setImage:[UIImage imageNamed:@"Reader-Email"] forState:UIControlStateNormal];
+        [shareButton addTarget:self action:@selector(shareButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [shareButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
+        [shareButton setBackgroundImage:buttonN forState:UIControlStateNormal];
+        shareButton.autoresizingMask = UIViewAutoresizingNone;
+        //thumbsButton.backgroundColor = [UIColor grayColor];
+        shareButton.exclusiveTouch = YES;
+        
+        [self addSubview:shareButton]; //leftButtonX += (iconButtonWidth + buttonSpacing);
+        
+        titleX += (iconButtonWidth + buttonSpacing); titleWidth -= (iconButtonWidth + buttonSpacing);
+        
+#endif // end of READER_ENABLE_THUMBS Option
+        
 		if ((document.canPrint == YES) && (document.password == nil)) // Document print enabled
 		{
 			Class printInteractionController = NSClassFromString(@"UIPrintInteractionController");
@@ -326,6 +345,11 @@
 - (void)doneButtonTapped:(UIButton *)button
 {
 	[delegate tappedInToolbar:self doneButton:button];
+}
+
+- (void)shareButtonTapped:(UIButton *)button
+{
+    [delegate tappedInToolbar:self shareButton:button];
 }
 
 - (void)thumbsButtonTapped:(UIButton *)button

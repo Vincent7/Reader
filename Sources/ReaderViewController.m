@@ -718,6 +718,14 @@
 
 #endif // end of READER_STANDALONE Option
 }
+- (void)tappedInToolbar:(ReaderMainToolbar *)toolbar shareButton:(UIButton *)button
+{
+#if (READER_ENABLE_SHARE == TRUE) // Option
+    
+    [self.delegate shareCurrentPDFFile];
+    
+#endif // end of READER_STANDALONE Option
+}
 
 - (void)tappedInToolbar:(ReaderMainToolbar *)toolbar thumbsButton:(UIButton *)button
 {

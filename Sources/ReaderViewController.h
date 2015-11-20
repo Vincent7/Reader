@@ -34,13 +34,12 @@
 @optional // Delegate protocols
 
 - (void)dismissReaderViewController:(ReaderViewController *)viewController;
-
+- (void)shareCurrentPDFFile;
 @end
 
 @interface ReaderViewController : UIViewController
 
 @property (nonatomic, weak, readwrite) id <ReaderViewControllerDelegate> delegate;
-
 - (instancetype)initWithReaderDocument:(ReaderDocument *)object;
 
 @end
