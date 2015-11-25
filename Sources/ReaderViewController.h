@@ -37,7 +37,7 @@
 - (void)shareCurrentPDFFile:(ReaderViewController *)viewController;
 @end
 
-@interface ReaderViewController : UIViewController
+@interface ReaderViewController : UIViewController<UIDocumentInteractionControllerDelegate>
 
 @property (nonatomic, weak, readwrite) id <ReaderViewControllerDelegate> delegate;
 - (instancetype)initWithReaderDocument:(ReaderDocument *)object;
