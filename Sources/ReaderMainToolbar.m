@@ -39,16 +39,18 @@
 
 #pragma mark - Constants
 
-#define BUTTON_X 8.0f
-#define BUTTON_Y 8.0f
+#define BUTTON_X 0.0f
+#define BUTTON_Y 0.0f
 
-#define BUTTON_SPACE 8.0f
-#define BUTTON_HEIGHT 30.0f
+#define BUTTON_SPACE 0.0f
+#define BUTTON_HEIGHT 55.0f
+#define BUTTON_WIDTH 55.0f
+
 
 #define BUTTON_FONT_SIZE 15.0f
 #define TEXT_BUTTON_PADDING 24.0f
 
-#define ICON_BUTTON_WIDTH 40.0f
+#define ICON_BUTTON_WIDTH 55.0f
 
 #define TITLE_FONT_SIZE 19.0f
 #define TITLE_HEIGHT 28.0f
@@ -91,11 +93,10 @@
 
 		UIFont *doneButtonFont = [UIFont systemFontOfSize:BUTTON_FONT_SIZE];
 		NSString *doneButtonText = @"C";
-		CGSize doneButtonSize = [doneButtonText sizeWithFont:doneButtonFont];
-		CGFloat doneButtonWidth = (doneButtonSize.width + TEXT_BUTTON_PADDING);
+//		CGSize doneButtonSize = [doneButtonText sizeWithFont:doneButtonFont];
 
 		UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
-		doneButton.frame = CGRectMake(leftButtonX, BUTTON_Y, doneButtonWidth, BUTTON_HEIGHT);
+		doneButton.frame = CGRectMake(leftButtonX, BUTTON_Y, BUTTON_WIDTH, BUTTON_HEIGHT);
 		[doneButton setTitleColor:[UIColor colorWithWhite:1.0f alpha:1.0f] forState:UIControlStateNormal];
 		[doneButton setTitleColor:[UIColor colorWithWhite:0.0f alpha:1.0f] forState:UIControlStateHighlighted];
 		[doneButton setTitle:doneButtonText forState:UIControlStateNormal];
@@ -107,9 +108,9 @@
 		//doneButton.backgroundColor = [UIColor grayColor];
 		doneButton.exclusiveTouch = YES;
 
-		[self addSubview:doneButton]; leftButtonX += (doneButtonWidth + buttonSpacing);
+		[self addSubview:doneButton]; leftButtonX += (BUTTON_WIDTH + buttonSpacing);
 
-		titleX += (doneButtonWidth + buttonSpacing); titleWidth -= (doneButtonWidth + buttonSpacing);
+		titleX += (BUTTON_WIDTH + buttonSpacing); titleWidth -= (BUTTON_WIDTH + buttonSpacing);
 
 #endif // end of READER_STANDALONE Option
 
@@ -190,7 +191,7 @@
         [shareButton addTarget:self action:@selector(shareButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
         [shareButton setTitle:@"Y" forState:UIControlStateNormal];
         [shareButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        
+
         [shareButton.titleLabel setFont:[UIFont fontWithName:@"EUMIcons-App-Regular" size:50]];
 //        [shareButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
 //        [shareButton setBackgroundImage:buttonN forState:UIControlStateNormal];
